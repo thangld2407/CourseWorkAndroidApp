@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/label_properties"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:text="@string/label_property" />
+        <Spinner
+            android:id="@+id/list_properties"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/properties"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/err_properties"/>
+        <TextView
+            android:id="@+id/label_bedrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:text="@string/label_bedrooms" />
+        <Spinner
+            android:id="@+id/list_bedrooms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/bedrooms"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/err_bedrooms"/>
+
+        <TextView
+            android:id="@+id/label_monthly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_monthly"
+            android:layout_margin="20dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="number"
+            android:id="@+id/input_monthly"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/monthly"/>
+
+        <TextView
+            android:id="@+id/label_dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_dateTime"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="0dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/dateTimeText"
+            android:inputType="datetime"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/err_dateTime"/>
+
+        <TextView
+            android:id="@+id/label_furnished"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_furnished"
+            android:layout_margin="20dp" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/list_furnished"
+            android:entries="@array/furnished"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/err_furnished"/>
+
+        <TextView
+            android:id="@+id/label_notes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_Note"
+            android:layout_margin="20dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/input_notes"
+            />
+
+        <TextView
+            android:id="@+id/label_reporter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_reporter"
+            android:layout_margin="20dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/input_reporter" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/err_nameReporter"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_submit"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
