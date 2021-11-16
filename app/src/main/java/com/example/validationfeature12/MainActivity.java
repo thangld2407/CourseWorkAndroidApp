@@ -41,9 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 String[] listError={};
                 List<String> ErrorValidated = new ArrayList<>(Arrays.asList((listError)));
 
-                String[] listArrProperties = {"Flat", "House", "Bungalow"};
-                String[] listArrBedrooms =  {"One", "Two", "Studio"};
-                String[] listArrFurnished = {"Furnished", "Unfurnished", "PartFurnished"};
+                String[] arrProperties = {"Flat", "House", "Bungalow"};
+                String[] arrBedrooms =  {"One", "Two", "Studio"};
+                String[] arrFurnished = {"Furnished", "Unfurnished", "Part Furnished"};
+
+                List<String> listArrProperties = new ArrayList<>(Arrays.asList(arrProperties));
+                List<String> listArrBedrooms = new ArrayList<>(Arrays.asList(arrBedrooms));
+                List<String> listArrFurnished = new ArrayList<>(Arrays.asList(arrFurnished));
 
                 listProperties = findViewById(R.id.list_properties);
                 String valueOfProperties = listProperties.getSelectedItem().toString();
@@ -69,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 if(!(listArrProperties.contains(valueOfProperties))){
                     ErrorValidated.add("You need to enter properties");
                 }
-                if((listArrBedrooms.contains(valueOfBedrooms))){
+                if(!(listArrBedrooms.contains(valueOfBedrooms))){
                     ErrorValidated.add("You need to enter bedrooms");
                 }
-                if((listArrFurnished.contains(valueOfFurnished))){
+                if(!(listArrFurnished.contains(valueOfFurnished))){
                     ErrorValidated.add("You need to enter Furnished");
                 }
                 if(isValidateEmptyOrWhiteSpace(valueOfNameReporter) || isValidateEmptyOrWhiteSpace(valueOfMonthly)){
